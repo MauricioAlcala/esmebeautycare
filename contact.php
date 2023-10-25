@@ -44,7 +44,7 @@ $options = [
 $context = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 $result_json = json_decode($result, true);
-
+print_r($_POST);
 if ($result_json['success']) {
     $mail->Body = "Nombre: {$name}  <br> Correo Electronico: {$email} <br> Mensaje : {$comment}";
 	$mail->AddAddress("contacto@esmebeautycare.com");
