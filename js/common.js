@@ -40,39 +40,37 @@ $(document).ready(function() {
 
 		overlay.style.display = 'block';
 
-		var data = 'name=' + name.val() + '&email=' + email.val() + '&comment='  + encodeURIComponent(comment.val()) + '&token=' + token;
-				
-		$('.text').attr('disabled','true');
-		$('.loading').show();
 		
-		$.ajax({
-			url: "contact.php",    
-			type: "POST",
-			data: data,        
-			cache: false,
-			success: function (msg) {
-				$('#overlay').text('Gracias, recibimos tu mensaje');
-				setTimeout(function () {
-					clearForm();
-					overlay.style.display = 'none';
-				}, 1000);
-			},
-			error: function (error) {
-				$('#overlay').text('Lo sentimos, ocurrió un error :(');
-				setTimeout(function () {
-					overlay.style.display = 'none';
-				}, 1000);
-			}
+
+		grecaptcha.ready(function() {
+			grecaptcha.execute('6LfmfMgoAAAAABGo9lwnXrba-RWtAsy7V2OeWXOn', {action: 'contact'}).then(function(token) {
+				// Include the token in your form submission
+				var data = 'name=' + name.val() + '&email=' + email.val() + '&comment='  + encodeURIComponent(comment.val()) + '&token=' + token;
+				
+				$('.text').attr('disabled','true');
+				$('.loading').show();
+				
+				$.ajax({
+					url: "contact.php",    
+					type: "POST",
+					data: data,        
+					cache: false,
+					success: function (msg) {
+						$('#overlay').text('Gracias, recibimos tu mensaje');
+						setTimeout(function () {
+							clearForm();
+							overlay.style.display = 'none';
+						}, 1000);
+					},
+					error: function (error) {
+						$('#overlay').text('Lo sentimos, ocurrió un error :(');
+						setTimeout(function () {
+							overlay.style.display = 'none';
+						}, 1000);
+					}
+				});
+			});
 		});
-
-		
-
-		// grecaptcha.ready(function() {
-		// 	grecaptcha.execute('6LfmfMgoAAAAABGo9lwnXrba-RWtAsy7V2OeWXOn', {action: 'contact'}).then(function(token) {
-		// 		// Include the token in your form submission
-				
-		// 	});
-		// });
 		
 		return false;
 	});	
