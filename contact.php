@@ -46,18 +46,16 @@ $result = file_get_contents($url, false, $context);
 $result_json = json_decode($result, true);
 
 if ($result_json['success']) {
-    // reCAPTCHA verification successful
-    // Proceed with your form processing
-} else {
-    // reCAPTCHA verification failed
-    // Handle accordingly (e.g., show an error message)
-}
-$mail->Body = "Nombre: {$name}  <br> Correo Electronico: {$email} <br> Mensaje : {$comment}";
-$mail->AddAddress("contacto@esmebeautycare.com");
+    $mail->Body = "Nombre: {$name}  <br> Correo Electronico: {$email} <br> Mensaje : {$comment}";
+	$mail->AddAddress("contacto@esmebeautycare.com");
 
-if (!$mail->Send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
+	if (!$mail->Send()) {
+		echo "Mailer Error: " . $mail->ErrorInfo;
+	} else {
+		echo "OK";
+	}
 } else {
-    echo "OK";
+    exit;
 }
+
 ?>
