@@ -23,8 +23,7 @@ function validateField(field, regex) {
 
 $(document).ready(function() {
 	
-	$('#submit').click(function () {	
-		overlay.style.display = 'block';
+	$('#submit').click(function () {
 
 		var name = $('input[name=name]');
 		var email = $('input[name=email]');
@@ -38,6 +37,10 @@ $(document).ready(function() {
 		if (nameError || emailError || commentError) {
 			return false;
 		}
+
+		overlay.style.display = 'block';
+
+		
 
 		grecaptcha.ready(function() {
 			grecaptcha.execute('6LfmfMgoAAAAABGo9lwnXrba-RWtAsy7V2OeWXOn', {action: 'contact'}).then(function(token) {
