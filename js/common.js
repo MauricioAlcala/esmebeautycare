@@ -46,10 +46,7 @@ $(document).ready(function() {
 			grecaptcha.execute('6LfmfMgoAAAAABGo9lwnXrba-RWtAsy7V2OeWXOn', {action: 'contact'}).then(function(token) {
 				// Include the token in your form submission
 				var data = 'name=' + name.val() + '&email=' + email.val() + '&comment='  + encodeURIComponent(comment.val()) + '&token=' + token;
-				console.log('Name:', name.val());
-				console.log('Email:', email.val());
-				console.log('Comment:', comment.val());
-				console.log('Token:', token);
+				
 				$('.text').attr('disabled','true');
 				$('.loading').show();
 				
@@ -59,7 +56,6 @@ $(document).ready(function() {
 					data: data,        
 					cache: false,
 					success: function (msg) {
-						console.log('Respuesta del servidor:', msg);
 						$('#overlay').text('Gracias, recibimos tu mensaje');
 						setTimeout(function () {
 							clearForm();
@@ -67,7 +63,6 @@ $(document).ready(function() {
 						}, 1000);
 					},
 					error: function (error) {
-						console.error(error);
 						$('#overlay').text('Lo sentimos, ocurrió un error :(');
 						setTimeout(function () {
 							overlay.style.display = 'none';
