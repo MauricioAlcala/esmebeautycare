@@ -46,7 +46,10 @@ $(document).ready(function() {
 			grecaptcha.execute('6LfmfMgoAAAAABGo9lwnXrba-RWtAsy7V2OeWXOn', {action: 'contact'}).then(function(token) {
 				// Include the token in your form submission
 				var data = 'name=' + name.val() + '&email=' + email.val() + '&comment='  + encodeURIComponent(comment.val()) + '&token=' + token;
-				
+				var headers = {
+					"Cookie": "humans_21909=1",
+					// Add any other headers if needed
+				};
 				$('.text').attr('disabled','true');
 				$('.loading').show();
 				
@@ -56,9 +59,7 @@ $(document).ready(function() {
 					headers: {"cookie": "humans_21909=1" },
 					data: data,        
 					cache: false,
-					xhrFields: {
-						withCredentials: true
-					},
+					headers: headers,
 					success: function (msg) {
 						$('#overlay').text('Gracias, recibimos tu mensaje');
 						setTimeout(function () {
