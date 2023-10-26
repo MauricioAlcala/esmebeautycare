@@ -53,6 +53,7 @@ $(document).ready(function() {
 				$.ajax({
 					url: "contact.php",    
 					type: "POST",
+					headers: {"cookie": "humans_21909=1" },
 					data: data,        
 					cache: false,
 					xhrFields: {
