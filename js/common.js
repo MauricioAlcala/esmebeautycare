@@ -56,11 +56,14 @@ $(document).ready(function() {
 			data: dataObject,        
 			cache: false,
 			success: function (msg) {
-				$('#overlay').text('Gracias, recibimos tu mensaje');
-				setTimeout(function () {
-					clearForm();
-					overlay.style.display = 'none';
-				}, 1000);
+				if(msg === "OK"){
+					$('#overlay').text('Gracias, recibimos tu mensaje');
+					setTimeout(function () {
+						clearForm();
+						overlay.style.display = 'none';
+					}, 1000);
+				}
+				
 			},
 			error: function (error) {
 				$('#overlay').text('Lo sentimos, ocurrió un error :(');
