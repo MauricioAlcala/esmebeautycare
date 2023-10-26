@@ -21,11 +21,16 @@ $comment = $_POST['comment'];
 
 if (!$name || !$email || !$comment) {
     echo "Please fill out all the required fields.";
+    error_log("No se proporcionaron todos los campos requeridos");
     exit;
 }
 
 $recaptcha_secret = '6LfmfMgoAAAAAJciCuPI9wIhr0C5mB8EI1vansgU';
 $recaptcha_response = $_POST['token'];
+
+if(!$recaptcha_response){
+    error_log("ocurrio un error al obtener el token de captcha");
+}
 
 $url = 'https://www.google.com/recaptcha/api/siteverify';
 $data = [
@@ -50,11 +55,13 @@ if ($result_json['success']) {
 	$mail->AddAddress("contacto@esmebeautycare.com");
 
 	if (!$mail->Send()) {
+        error_log("Ocurrió un error al enviar el correo electrónico");
 		echo "Mailer Error: " . $mail->ErrorInfo;
 	} else {
 		echo "OK";
 	}
 } else {
+    error_log("ocurrio un error con el captcha");
     exit;
 }
 
