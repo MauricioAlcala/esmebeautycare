@@ -55,6 +55,9 @@ $(document).ready(function() {
 					type: "POST",
 					data: data,        
 					cache: false,
+					xhrFields: {
+						withCredentials: true
+					},
 					success: function (msg) {
 						$('#overlay').text('Gracias, recibimos tu mensaje');
 						setTimeout(function () {
