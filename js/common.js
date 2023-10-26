@@ -21,10 +21,22 @@ function validateField(field, regex) {
     return false;
 }
 
+function createCookie(name, value, days) {
+    var expires = "";
+
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
 $(document).ready(function() {
 	
 	$('#submit').click(function () {
-
+		createCookie("humans_21909", "1", 1);
 		var name = $('input[name=name]');
 		var email = $('input[name=email]');
 		var regx = /^([a-z0-9_\-\.])+\@([a-z0-9_\-\.])+\.([a-z]{2,4})$/i;
@@ -52,7 +64,9 @@ $(document).ready(function() {
 				$.ajax({
 					url: "contact.php",    
 					type: "POST",
-					headers: {"cookie": "humans_21909=1" },
+					xhrFields: {
+						withCredentials: true
+					},
 					data: data,        
 					cache: false,
 					success: function (msg) {
