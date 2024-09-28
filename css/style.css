@@ -475,7 +475,7 @@ a.fullpricelist {
   position: relative;
   text-align: center;
   overflow: hidden;
-  padding: 25% 20%;
+  padding: 20%;
   color: rgba(255,255,255,0.7);
   align-content: center;
   justify-content: center;
@@ -591,7 +591,7 @@ a.fullpricelist {
 	border-bottom:1px solid #555;
 	font-family:Oswald;
 	padding:10px 0;
-	color:rgba(241, 229, 90, 0.5);
+	color:rgba(0, 0, 0, 0.5);
 }
 
 .contactform input.btnsend {
@@ -628,9 +628,9 @@ a.fullpricelist {
     margin-left: -60px;
 }
 .contactaddress {
-	    padding: 20%;
+	    padding: 30%;
 }
-a.map {border-bottom: 1px dashed;    color: #fff;}
+a.map {border-bottom: 2px dashed;    color: #fff;}
 
 
 .logoarea {width:46%;float:left;}
