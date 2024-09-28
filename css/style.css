@@ -457,17 +457,13 @@ a.fullpricelist {
 
 
 .testimonialarea {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   width: 1200px;
   max-width: 100%;
   margin: 0px auto;
 }
 
 .testimonialarea-bubble {
-  grid-column: 1;
-  grid-row: 1;
-  display: flex;
+  display: inline-block;
   width: 330px;
   height: 330px;
   background: rgba(90, 227, 241, 0.5);
@@ -476,10 +472,9 @@ a.fullpricelist {
 }
 
 .testimonial-widget {
-  display: flex;
   position: relative;
   text-align: center;
-  /* overflow: hidden; */
+  overflow: hidden;
   padding: 25% 20%;
   color: rgba(255,255,255,0.7);
   align-content: center;
@@ -578,13 +573,12 @@ a.fullpricelist {
 
 
 .contactform-bubble {
-  grid-column: 2;
-  grid-row: 1;
   display: inline-block;
   width: 400px;
   height: 400px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 100%;
+  margin-left:-60px;
 }
 .contactform {
 	padding:20%;
@@ -625,8 +619,6 @@ a.fullpricelist {
 }
 
 .contactaddress-bubble {
-  grid-column: 3;
-    grid-row: 1;
     display: inline-block;
     width: 200px;
     height: 200px;

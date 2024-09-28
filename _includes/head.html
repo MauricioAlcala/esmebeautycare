@@ -1,14 +1,19 @@
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="#">
+    <meta name="description" content="{{site.description}}">
+
+
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{site.description}}">
+
+    <meta name="twitter:title" content="{{site.title}}" />
+    <meta name="twitter:image" content="https://esmebeautycare.com//img/logo/og-img.png" />
+    <meta name="twitter:description" content="{{site.description}}" />
 
     {%- seo -%}
     {%- feed_meta -%}
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
@@ -24,10 +29,9 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,300italic,300,700,700italic'
         rel='stylesheet' type='/text/css'>
 
-        <!--script src="https://www.google.com/recaptcha/api.js?render=6LfmfMgoAAAAABGo9lwnXrba-RWtAsy7V2OeWXOn"></script-->
+    <!--script src="https://www.google.com/recaptcha/api.js?render=6LfmfMgoAAAAABGo9lwnXrba-RWtAsy7V2OeWXOn"></script-->
     {% include google.analytics.html %}
 
-{% include datos.html %}
+    {% include datos.html %}
 
 </head>
-
