@@ -3,7 +3,7 @@ layout: post
 title:  "Faciales 2024: Lo que está en tendencia"
 date:   2024-09-30 16:45:05 -0700
 author: Esmeralda Franco
-categories: Belleza
+categories: Faciales
 permalink : /:categories/:title:output_ext
 image: 
 description: El mundo de los tratamientos faciales está evolucionando rápidamente, impulsado por avances tecnológicos y una creciente demanda por soluciones personalizadas y efectivas para el cuidado de la piel.
@@ -25,6 +25,6 @@ Beneficios: La máscara LED no es invasiva y requiere poco o ningún tiempo de r
 <img src="/img/blog/Mascara-LED-y-Terapia-de-Luz.jpg.webp" class="img-fluid" alt="Máscara LED y Terapia de Luz">
 
 ***2. Faciales con Microcorrientes***
-[Leer Más](/faciales-con-microcorrientes.md)
+[Leer Más](/2024-09-30-faciales-con-microcorrientes.md)
     
 
