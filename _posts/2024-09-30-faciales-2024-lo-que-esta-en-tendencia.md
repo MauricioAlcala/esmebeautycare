@@ -25,6 +25,6 @@ Beneficios: La máscara LED no es invasiva y requiere poco o ningún tiempo de r
 <img src="/img/blog/Mascara-LED-y-Terapia-de-Luz.jpg.webp" class="img-fluid" alt="Máscara LED y Terapia de Luz">
 
 ***2. Faciales con Microcorrientes***
-[Leer Más](/belleza/faciales-con-microcorrientes.html)
+[Leer Más](https://esmebeautycare.com/belleza/faciales-con-microcorrientes.html)
     
 
