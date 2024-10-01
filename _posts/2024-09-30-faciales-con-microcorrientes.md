@@ -7,11 +7,10 @@ categories: Belleza
 permalink : /:categories/:title:output_ext
 image: 
 description: Los faciales con microcorrientes han ganado popularidad por su capacidad para tonificar y levantar los músculos faciales sin necesidad de cirugía o inyecciones. En 2024, esta técnica seguirá siendo una tendencia fuerte, sobre todo para quienes buscan un enfoque natural al rejuvenecimiento facial.
-
+hidden: true
 ---
 
 Los faciales con microcorrientes han ganado popularidad por su capacidad para tonificar y levantar los músculos faciales sin necesidad de cirugía o inyecciones. En 2024, esta técnica seguirá siendo una tendencia fuerte, sobre todo para quienes buscan un enfoque natural al rejuvenecimiento facial.
-
 ¿Cómo funciona? Las microcorrientes son pequeñas descargas eléctricas que estimulan los músculos faciales, ayudando a tensar la piel y mejorar la circulación.
 Beneficios:
 Mejora el contorno facial.
